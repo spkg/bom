@@ -17,8 +17,8 @@ in the discussion on this issue at https://groups.google.com/forum/#!topic/golan
 
 >  (Although they did make the compiler accept source files with BOMs, if I remember right.)
 
-The same discussion thread makes the comment that it should not be difficult to write an `io.Reader` that 
-eats the BOM.
+In the same discussion thread another participant makes the comment that it should not be difficult to write 
+an `io.Reader` that eats the BOM.
 
-It isn't, and here it is.
+It isn't difficult, and here it is.
 
