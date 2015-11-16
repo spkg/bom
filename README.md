@@ -6,9 +6,10 @@
 [![license](http://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://raw.githubusercontent.com/spkg/bom/master/LICENSE.md)
 [![Coverage](http://gocover.io/_badge/github.com/spkg/bom)](http://gocover.io/github.com/spkg/bom)
 
-The `bom` package provides a convenient way to strip UTF-8 byte order marks (BOM) from the
-beginning of a byte slice or an `io.Reader`.
+The `bom` package provides a convenient way to strip [UTF-8 byte order marks](https://en.wikipedia.org/wiki/Byte_order_mark#UTF-8) 
+(BOM) from the beginning of a byte slice or an `io.Reader`.
 
+The Unicode Standard permits byte order marks in UTF-8, but neither requires nor recommends its use.
 The Go standard library provides no support for UTF-8 byte order marks, and it looks like it never will. 
 To quote Andy Balholm in the discussion on this issue at https://groups.google.com/forum/#!topic/golang-nuts/OToNIPdfkks
 
