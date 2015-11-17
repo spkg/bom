@@ -7,9 +7,6 @@ import "bufio"
 func discardBytes(buf *bufio.Reader, n int) {
 	// cannot use the buf.Discard method as it was introduced in Go 1.5
 	for i := 0; i < n; i++ {
-		_, err := buf.ReadByte()
-		if err != nil {
-			return
-		}
+		buf.ReadByte()
 	}
 }
