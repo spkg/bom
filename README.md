@@ -22,5 +22,5 @@ discussion on this issue at https://groups.google.com/forum/#!topic/golang-nuts/
 In the same discussion thread another participant makes the comment that it should not be difficult to write 
 an `io.Reader` that eats the BOM.
 
-It isn't difficult, and here it is.
+It isn't difficult, and here is one simple implementation.
 
