@@ -1,5 +1,5 @@
 # bom
-## byte order mark
+## strip UTF-8 byte order marks
 
 [![GoDoc](https://godoc.org/github.com/spkg/bom?status.svg)](https://godoc.org/github.com/spkg/bom)
 [![Build Status (Linux)](https://travis-ci.org/spkg/bom.svg?branch=master)](https://travis-ci.org/spkg/bom)
