@@ -1,8 +1,9 @@
 # bom
-## byte order mark
+## strip UTF-8 byte order marks
 
 [![GoDoc](https://godoc.org/github.com/spkg/bom?status.svg)](https://godoc.org/github.com/spkg/bom)
-[![Build Status](https://travis-ci.org/spkg/bom.svg?branch=master)](https://travis-ci.org/spkg/bom)
+[![Build Status (Linux)](https://travis-ci.org/spkg/bom.svg?branch=master)](https://travis-ci.org/spkg/bom)
+[![Build status (Windows)](https://ci.appveyor.com/api/projects/status/065x7yuc77xicv59?svg=true)](https://ci.appveyor.com/project/jjeffery/bom)
 [![license](http://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://raw.githubusercontent.com/spkg/bom/master/LICENSE.md)
 [![Coverage](http://gocover.io/_badge/github.com/spkg/bom)](http://gocover.io/github.com/spkg/bom)
 [![GoReportCard](http://goreportcard.com/badge/spkg/bom)](http://goreportcard.com/report/spkg/bom)
@@ -23,4 +24,5 @@ discussion on this issue at https://groups.google.com/forum/#!topic/golang-nuts/
 In the same discussion thread another participant makes the comment that it should not be difficult to write
 an `io.Reader` that eats the BOM.
 
-It isn't difficult, and here it is.
+It isn't difficult, and here is one simple implementation.
+
