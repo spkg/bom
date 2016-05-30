@@ -1,9 +1,9 @@
 language: go
 go:
-- 1.6
-- 1.5
-- 1.4
-- 1.3
+  - 1.6
+  - 1.5
+  - 1.4
+  - 1.3
 
 install:
   - go get github.com/stretchr/testify/assert
@@ -12,8 +12,9 @@ install:
 
 script:
   - go test -v -covermode=count -coverprofile=coverage.out
-  - $(go env GOPATH | awk 'BEGIN{FS=":"} {print $1}')/bin/goveralls -coverprofile=coverage.out -service=travis-ci -repotoken $COVERALLS_TOKEN
+  - $(go env GOPATH | awk 'BEGIN{FS=":"} {print $1}')/bin/goveralls -coverprofile=coverage.out -service=travis-ci -repotoken=$COVERALLS_TOKEN
 
 env:
   global:
-    - secure: jEZT6lf0AajY1kCpgdtzXf9xJM1a75/0NLdp2BsG9S88G3b20p8cMyDUhPqYH1qZ/Uf34kGO6N01g1KB2TpV4q5VmlMGGkj/vDr4hIpmNiamDcC0Cs9nEvldAO5ECmvtdylks3O/pqlliUW1SDWnnOOEZWJnbYnhDfW7M3jShCSMOtudAkl9IA54hCfotTrXtZL+7K00IBs5tX/0eBSeqKgJaWF6z3paiXkbULI2SAGLsBvKYhQBvjeCRgWrBTOY0gAJFL4yyJOPd8iJqazCIFU8IrI5cEZOzHjWZY9j+1377FD5r31sJPWmd1RDedqUD6XfTXo1LW24R+qBBKQRGeUyav8qEUFnpcIC6YEI+gLqu9I1lcOlsYLjcB/gWOzgrSf0Db7ISoqBLr+I3SEal5SqALjC0kQDnxFlEmvDeacleCO3i/DB157B+gXRVD2F5kf6RIN+3XdAUubrfAfgE0UQv7TfH/OnFZVZn7umQPOUH2CcMpT/VpJirbGhoqd+XAcEPDMc59ev38pkxIZM7mvLg8H/rrnCeqjgRE4fE9j2ufGbuDCZdPFzuV2NIrCdQmEiEoMJ0s0Da3p3M9hoS4BVdqdJ1stYPmRfOtJA3K6rCS0jVs4eTbW7cJUzEHG+sOAyvDEVBjN42IQWOYJWodTQUtTlHrgY7/UT5h9Vijs=
+    - secure: yIYBurdoTJoQFV7Z2wTf2O15IRuXeq06CI+zhKlRJbRGMavzxqLceSljzZli+8ROQfmyA+U/vI0bjHF2mClR6uWMFsRiMC7C+Y+Vj5BwUac/wr8fLbri6x+2rXcPiMz1/vXLo11c3rXyGW1sMldBN38kCuJkbH0pAJ12qh7eIVRFhThYOin0IFvnLQiqzxJjZs0DtwTi6h1O9oBNAr3ZM7K1Jj5skrKfCNPkUwYyLMQrL+05iZRFz8HukgEfLCB3zO4m+Tc+1mn9k3mAHhNxv9HpBwOaz67J5P4N131eGaChKvd7Rn2qfu6hyya/tnOWDSKj/59AO2ZlZq47mhLiALbOCBlNDCtvqE7btzWgwu1wfd9CixMTKG/1M889LudmHt6MJGnRiThtZeTBKCJ/mgpI4rm0X2E644koBHJ9tdfp78PCklDKE7MSLrZI0v6AMzzHRAK6GR/inujhZrYA/aC8U2JeezmbVO5t4ehifymBwbAIspuFjE40prRkZvV3dU+3gnFuUxKeX0FeFPfSqMJNM2Xoizte+PzBbzj6s93TnsqjwbUTsnuvxswnAaoFCGhhWyPlMBbrXlq9cgF+th69BFyUL7RI801zpXInhEwxF1Jdzw83jOzW/lSW0MBY6oMyfRJ/Y716IDFsdppyh+h50Kyy3zr39dCWZ53HuMc=
+
