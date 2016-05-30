@@ -11,7 +11,7 @@ install:
 
 script:
   - go test -v -covermode=count -coverprofile=coverage.out
-  - $(go env GOPATH | awk -F: '{print $1}')/bin/goveralls -coverprofile=coverage.out -service=travis-ci -repotoken $COVERALLS_TOKEN
+  - $(go env GOPATH | awk 'BEGIN{FS=":"} {print $1}')/bin/goveralls -coverprofile=coverage.out -service=travis-ci -repotoken $COVERALLS_TOKEN
 
 env:
   global:
