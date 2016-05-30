@@ -14,7 +14,3 @@ script:
   - go test -v -covermode=count -coverprofile=coverage.out
   - $(go env GOPATH | awk 'BEGIN{FS=":"} {print $1}')/bin/goveralls -coverprofile=coverage.out -service=travis-ci
 
-env:
-  global:
-    - secure: yIYBurdoTJoQFV7Z2wTf2O15IRuXeq06CI+zhKlRJbRGMavzxqLceSljzZli+8ROQfmyA+U/vI0bjHF2mClR6uWMFsRiMC7C+Y+Vj5BwUac/wr8fLbri6x+2rXcPiMz1/vXLo11c3rXyGW1sMldBN38kCuJkbH0pAJ12qh7eIVRFhThYOin0IFvnLQiqzxJjZs0DtwTi6h1O9oBNAr3ZM7K1Jj5skrKfCNPkUwYyLMQrL+05iZRFz8HukgEfLCB3zO4m+Tc+1mn9k3mAHhNxv9HpBwOaz67J5P4N131eGaChKvd7Rn2qfu6hyya/tnOWDSKj/59AO2ZlZq47mhLiALbOCBlNDCtvqE7btzWgwu1wfd9CixMTKG/1M889LudmHt6MJGnRiThtZeTBKCJ/mgpI4rm0X2E644koBHJ9tdfp78PCklDKE7MSLrZI0v6AMzzHRAK6GR/inujhZrYA/aC8U2JeezmbVO5t4ehifymBwbAIspuFjE40prRkZvV3dU+3gnFuUxKeX0FeFPfSqMJNM2Xoizte+PzBbzj6s93TnsqjwbUTsnuvxswnAaoFCGhhWyPlMBbrXlq9cgF+th69BFyUL7RI801zpXInhEwxF1Jdzw83jOzW/lSW0MBY6oMyfRJ/Y716IDFsdppyh+h50Kyy3zr39dCWZ53HuMc=
-
