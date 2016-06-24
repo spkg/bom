@@ -6,7 +6,7 @@
 [![Build status (Windows)](https://ci.appveyor.com/api/projects/status/065x7yuc77xicv59?svg=true)](https://ci.appveyor.com/project/jjeffery/bom)
 [![License](http://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://raw.githubusercontent.com/spkg/bom/master/LICENSE.md)
 [![Coverage Status](https://coveralls.io/repos/github/spkg/bom/badge.svg?branch=master)](https://coveralls.io/github/spkg/bom?branch=master)
-[![GoReportCard](http://goreportcard.com/badge/spkg/bom)](http://goreportcard.com/report/spkg/bom)
+[![GoReportCard](https://goreportcard.com/badge/github.com/spkg/bom)](http://goreportcard.com/report/spkg/bom)
 
 
 The `bom` package provides a convenient way to strip [UTF-8 byte order marks](https://en.wikipedia.org/wiki/Byte_order_mark#UTF-8)
