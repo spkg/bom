@@ -2,11 +2,10 @@ package bom_test
 
 import (
 	"bytes"
-	"io/ioutil"
+	"io"
 	"testing"
 
 	"github.com/spkg/bom"
-	"github.com/stretchr/testify/assert"
 )
 
 var testCases = []struct {
@@ -52,17 +51,15 @@ var testCases = []struct {
 }
 
 func TestClean(t *testing.T) {
-	assert := assert.New(t)
-
 	for _, tc := range testCases {
-		output := bom.Clean(tc.Input)
-		assert.Equal(tc.Expected, output)
+		actual := bom.Clean(tc.Input)
+		if !bytes.Equal(actual, tc.Expected) {
+			t.Errorf("got %v, want %v", actual, tc.Expected)
+		}
 	}
 }
 
 func TestReader(t *testing.T) {
-	assert := assert.New(t)
-
 	for _, tc := range testCases {
 		// An input value of nil works differently to the Clean function.
 		// In this case it results in an empty buffer, not nil.
@@ -72,8 +69,13 @@ func TestReader(t *testing.T) {
 		}
 		r1 := bytes.NewReader(tc.Input)
 		r2 := bom.NewReader(r1)
-		output, err := ioutil.ReadAll(r2)
-		assert.NoError(err)
-		assert.Equal(expected, output)
+		actual, err := io.ReadAll(r2)
+		if err != nil {
+			t.Errorf("want no error, got %v", err)
+			continue
+		}
+		if !bytes.Equal(actual, expected) {
+			t.Errorf("got %v, want %v", actual, expected)
+		}
 	}
 }

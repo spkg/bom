@@ -1,7 +1,7 @@
 # bom
 ## strip UTF-8 byte order marks
 
-[![GoDoc](https://godoc.org/github.com/spkg/bom?status.svg)](https://godoc.org/github.com/spkg/bom)
+[![GoDoc](https://pkg.go.dev/badge/github.com/spkg/bom)](https://godoc.org/github.com/spkg/bom)
 [![Build Status (Linux)](https://travis-ci.org/spkg/bom.svg?branch=master)](https://travis-ci.org/spkg/bom)
 [![Build status (Windows)](https://ci.appveyor.com/api/projects/status/065x7yuc77xicv59?svg=true)](https://ci.appveyor.com/project/jjeffery/bom)
 [![License](http://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://raw.githubusercontent.com/spkg/bom/master/LICENSE.md)

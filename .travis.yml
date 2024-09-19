@@ -1,14 +1,12 @@
 language: go
 go:
-  - 1.15
-  - 1.14
+  - 1.23
+  - 1.16
 
 install:
-  - go get github.com/stretchr/testify/assert
   - go get golang.org/x/tools/cmd/cover
   - go get github.com/mattn/goveralls
 
 script:
   - go test -v -covermode=count -coverprofile=coverage.out
   - $(go env GOPATH | awk 'BEGIN{FS=":"} {print $1}')/bin/goveralls -coverprofile=coverage.out -service=travis-ci
-
